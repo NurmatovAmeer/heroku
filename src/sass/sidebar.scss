@@ -1,0 +1,162 @@
+/****** Font styles *******/
+.Abhaya{
+  font-family: "Abhaya Libre",sans-serif ;
+}
+.Poppins{
+  font-family: "Poppins",sans-serif;
+}
+
+/****** NavBar styles *******/
+
+body{
+overflow: hidden;
+  .sidebar{
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0px;
+
+    .sidebar-header{
+      padding: 19px;
+      width: 100%;
+      height: 15.7vh;
+      background-color: #ffffff;
+      .ivocab-icon{
+        display: none;
+      }
+      .ivocab-font{
+        display: none;
+      }
+    }
+
+    .ivocab-description{
+      background-color: #fff;
+      height: 25px;
+      .improve{
+        display: none;
+        position: absolute;
+        top: 105px;
+        left: 75px;
+        color: #13116E;
+      }
+      .vocab{
+        display: none;
+        position: absolute;
+        top: 140px;
+        left: 80px;
+        color: #13116E;
+      }
+    }
+
+    .sidebar-navigations{
+      padding: 40px 19px 19px 19px;
+      background-color: #6A56E4;
+      height: calc(100vh - 17vh);
+      display: none;
+      ul{
+        li{
+          width: 213px;
+          height: 53px;
+          left: 19px;
+          top: 152px;
+          margin-top: 10px;
+
+          border-radius: 10px;
+
+          a{
+            margin-top: 5px;
+            margin-left: 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 21px;
+            /* or 88% */
+
+
+            color: #141272;
+          }
+        }
+        .admin{
+          font-size: 30px;
+          color: white;
+          padding-left: 30px;
+          width: 213px;
+          height: 53px;
+          left: 19px;
+          top: 152px;
+          margin-top: 50px;
+
+          border: 1px solid white;
+          border-radius: 10px;
+        }
+        .log{
+          font-size: 30px;
+          color: white;
+          padding-left: 30px;
+          width: 213px;
+          height: 53px;
+          left: 19px;
+          margin-top: 10px;
+
+          border: 1px solid white;
+          border-radius: 10px;
+        }
+        li:hover{
+          background: #4C39C1A6;
+          a{
+            color: #1BCFE7;
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+  /****** NavBar active styles ******/
+  .sidebar.active {
+    display: block;
+    height: 760px;
+    width: 250px;
+    .sidebar-header{
+      .ivocab-icon{
+        display: block;
+      }
+      .ivocab-font{
+        display: block;
+      }
+    }
+
+    .ivocab-description{
+      .improve{
+        display: block;
+      }
+      .vocab{
+        display: block;
+      }
+    }
+
+    .sidebar-navigations{
+      display: block;
+    }
+  }
+  .sidebar.active ~ .bar{
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    width: 1160px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar.active ~ .bar{
+    position: absolute;
+    top: 0px;
+    max-width: 576px;
+    height: 50px;
+  }
+}
